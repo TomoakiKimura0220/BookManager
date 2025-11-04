@@ -85,7 +85,7 @@ http://localhost:3000
 
 ---
 
-## 🗃️ ディレクトリ構成
+## ディレクトリ構成
 
 ```csharp
 BookManager/
