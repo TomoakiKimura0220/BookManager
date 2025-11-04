@@ -9,6 +9,13 @@
 - 書籍を一括管理できるWebアプリ
 - ユーザーごとに書籍の登録とメモが可能
 
+### 機能一覧
+-   ログイン機能 
+-   Google Books API を用いた書籍検索機能
+-   Markdown形式の読書記録登録・編集・削除
+-   表紙画像付きの書籍一覧表示
+-   SQLite3によるローカルDB管理
+
 ### デモ動画
 [![](http://markdown-videos-api.jorgenkh.no/youtube/lPSApYnldCg)](https://youtu.be/lPSApYnldCg)
 
@@ -20,9 +27,9 @@
 - HTML
 - CSS
 - JavaScript
-- Node.js
-- Prisma（SQLite3）
-- Express
+- Node.js...21.5.0
+- Prisma（SQLite3）...5.8.1
+- Express...4.17.1
 - Markdown-it
 
 ### 特徴や工夫点
@@ -33,3 +40,67 @@
 - 書籍の一覧性を向上させるためにUIの見直しが必要
 - GoogleBooksAPIだけでは取得できる書籍の量が少ないため、別の書籍データ取得用APIを費用することで網羅率を上げたい
 - MVCモデル学習のためにLaravelでプログラムを置き換えたい
+
+---
+
+## 実行方法
+
+### 1\. リポジトリのクローン
+
+```bash
+git clone https://github.com/yourusername/bookmanager.git
+cd bookmanager
+```
+
+### 2\. 依存関係のインストール
+
+```bash
+npm install
+```
+
+### 3\. データベースのセットアップ
+
+PrismaでSQLiteデータベースを作成します。
+
+```bash
+npx prisma migrate dev --name init
+```
+
+デフォルトで `prisma/schema.prisma` の設定に基づき、`dev.db` が生成されます。
+
+### 4\. 開発サーバーの起動
+
+```bash
+npm start
+```
+
+もしくは
+
+```bash
+node src/index.js
+```
+
+ブラウザで以下のURLを開きます：  
+http://localhost:3000
+
+---
+
+## 🗃️ ディレクトリ構成
+
+```csharp
+BookManager/
+├── src/
+│   ├── controllers/     # ロジック制御
+│   ├── routes/          # ルーティング
+│   ├── views/           # EJSテンプレート
+│   ├── index.js         # エントリーポイント
+│   └── prisma/          # DBスキーマ設定
+├── public/              # 静的ファイル（CSS/画像など）
+├── package.json
+└── README.md
+```
+
+---
+
+
+    
