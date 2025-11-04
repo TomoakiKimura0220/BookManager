@@ -20,7 +20,7 @@
 [![](http://markdown-videos-api.jorgenkh.no/youtube/lPSApYnldCg)](https://youtu.be/lPSApYnldCg)
 
 ### BookManager_仕様書
-[仕様書](BookManager_仕様書.pdf)
+- [仕様書](BookManager_仕様書.pdf)
 
 ### 製作期間と製作時期
 - 大学の講義内で期末課題として製作
